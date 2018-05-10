@@ -263,6 +263,7 @@ header {
 .logo a span.b5 {font-weight:100;}
 
 
+
 /* __________ Menu __________ */
 .menu_block {
 	position:fixed;
@@ -632,7 +633,7 @@ header {
 }
 
 .purpose_block .ipad_img1 {
-    margin-top:-116px;
+    margin-top:20px;
 }
 
 
