@@ -110,8 +110,78 @@ a:hover, a:focus {text-decoration:none; color:#333;}
 
 
 
+/*-----------------------------------------------------------------------------------*/
+/*	Scroll
+/*-----------------------------------------------------------------------------------*/
 
 
+.overhead .down {
+position: absolute;
+  top: 80%;
+  left: 46.5%;
+}
+
+.downarrow{
+  display: flex;
+  background: #f3f3f3;
+}
+
+.down{
+  margin: auto;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  background: #111111;
+  color: white;
+  box-shadow: 4px 4px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.down a{
+  position: relative;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.down:focus{
+  outline:none;
+}
+
+.down::after, .down::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+}
+
+.down::after{
+  background: #FFC300;
+  clip-path: circle(0% at 0% 100%);
+  transition: clip-path 0.4s ease-out 0s;
+}
+
+.down::before{
+  background: #FD0;
+  clip-path: circle(0% at 0% 0%);
+  transition: clip-path 0.4s ease-out 0.1s;
+}
+
+.down:hover::before, .down:hover::after{
+  clip-path: circle(100% at 50% 50%);
+}
+
+.down:hover::before{
+  transition: clip-path 0.4s ease-out 0s;
+}
+
+.down:hover::after{
+  transition: clip-path 0.4s ease-out 0.1s; 
+}
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -343,12 +413,6 @@ header {
 .sub-menu ul li:last-child a {border-bottom:0;}
 
 .sub-menu ul li.active a, .sub-menu ul li a:hover {color:#fff !important; background:#161616;}
-
-
-
-
-
-
 
 /*-----------------------------------------------------------------------------------*/
 /*	SEARCH FORM TOP
